@@ -31,6 +31,10 @@ import { customFontsToLoad } from "./theme"
 import Config from "./config"
 import { KeyboardProvider } from "react-native-keyboard-controller"
 import { loadDateFnsLocale } from "./utils/formatDate"
+import { initializeErrorMonitoring } from "./services/monitoring/sentry"
+
+// Initialize Sentry as early as possible
+initializeErrorMonitoring()
 
 export const NAVIGATION_PERSISTENCE_KEY = "NAVIGATION_STATE"
 
